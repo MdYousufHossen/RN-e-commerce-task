@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
     },
     image: {
         resizeMode: 'stretch',
-        width: 150,
-        height: 120,
+        width: 170,
+        height: 140,
         borderRadius: 10,
     },
     name: {

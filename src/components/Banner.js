@@ -13,6 +13,7 @@ const Banner = () => {
             autoPlay={true}
             data={[...new Array(6).keys()]}
             scrollAnimationDuration={1000}
+            mode="parallax"
             onSnapToItem={(index) => console.log('current index:', index)}
             renderItem={({ index }) => (
                 <View
@@ -30,7 +31,6 @@ const Banner = () => {
 const styles = StyleSheet.create({
     carusel:{
         flex: 1,
-        borderWidth: 1,
         justifyContent: 'center',
     },
     image:{

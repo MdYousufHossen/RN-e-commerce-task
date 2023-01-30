@@ -1,6 +1,41 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Title from '../components/Title';
+
+const brand=[
+    {   
+        name:"Maruti",
+        img: require("../assest/brand-1.jpeg")
+    },
+    {   
+        name:"Hyundai",
+        img: require("../assest/brand-hyundai.png")
+    },
+    {   
+        name:"Tata",
+        img: require("../assest/brand-tata.png")
+    },
+    {
+        name:"Mahindra",
+        img: require("../assest/brand-butterfly.jpeg")
+    },
+    {   
+        name:"Maruti",
+        img: require("../assest/brand-1.jpeg")
+    },
+    {   
+        name:"Hyundai",
+        img: require("../assest/brand-hyundai.png")
+    },
+    {   
+        name:"Tata",
+        img: require("../assest/brand-tata.png")
+    },
+    {
+        name:"Mahindra",
+        img: require("../assest/brand-butterfly.jpeg")
+    }
+]
 
 const PopularBrands = () => {
     return (
@@ -8,14 +43,18 @@ const PopularBrands = () => {
             <Title text="Popular Brands"/>
             <View style={styles.brandContainer}>
                 {
-                    [...new Array(6)].map(item=>
+                   brand.map(item=>
                         <View style={styles.boxContainer}>
-                        <Image style={styles.image} source={require("../assest/car.jpeg")}/>
-                        <Text style={styles.text}>Maruti</Text>
+                        <Image style={styles.image} source={item.img}/>
+                        <Text style={styles.text}>{item.name}</Text>
                    </View>
                         )
                 }  
+                <TouchableOpacity style={styles.btn}>
+                <Text>View All Brands</Text>
+            </TouchableOpacity>
             </View>
+            
         </View>
     );
 };
@@ -27,19 +66,32 @@ const styles= StyleSheet.create({
     brandContainer:{
         flexDirection:"row",
         flexWrap: "wrap",
-        justifyContent: "center"    
+        justifyContent: "center",
+        width: "100%",    
     },
     boxContainer:{
         margin: 5
     },
     image: {
-        resizeMode: 'stretch',
-        width: 100,
-        height: 80,
+        resizeMode: 'contain',
+        width: 80,
+        height: 70,
         borderRadius: 10,
     },
     text:{
         textAlign:"center"
+    },
+    btn:{
+        // textAlign:"center",
+        backgroundColor: "#f75e34",
+        width: 150,
+        height: 40,
+        borderRadius: 20,
+        marginVertical: "auto",
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: 10,
+        color: "white",
     }
     })
 export default PopularBrands;
