@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Title from '../components/Title';
+import { responsiveHeight, responsiveWidth } from '../utils/ResposiveUI';
 
 const brand=[
     {   
@@ -67,25 +68,24 @@ const styles= StyleSheet.create({
         flexDirection:"row",
         flexWrap: "wrap",
         justifyContent: "center",
-        width: "100%",    
+        // width: "100%",    
     },
     boxContainer:{
         margin: 5
     },
     image: {
         resizeMode: 'contain',
-        width: 80,
-        height: 70,
+        width: responsiveWidth(80),
+        height:responsiveHeight(50),
         borderRadius: 10,
     },
     text:{
         textAlign:"center"
     },
     btn:{
-        // textAlign:"center",
         backgroundColor: "#f75e34",
-        width: 150,
-        height: 40,
+        width:responsiveWidth(150),
+        height:responsiveHeight(40),
         borderRadius: 20,
         marginVertical: "auto",
         alignItems: "center",

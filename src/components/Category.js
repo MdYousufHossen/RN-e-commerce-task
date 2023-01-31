@@ -34,27 +34,21 @@ const categoryData= [
   ]
 const Category = () => {
     return (
-     <> 
         <FlatList 
         contentContainerStyle={styles.container}
-        data={categoryData.slice(0,2)}
+        data={categoryData}
         renderItem={({item}) =><CategoryCard key={item.key} name={item.name} img={item.image} desc={item.desc} color={item.color}/>}
-      />
-        <FlatList 
-        contentContainerStyle={styles.container}
-        data={categoryData.slice(2.4)}
-        renderItem={({item}) =><CategoryCard key={item.key} name={item.name} img={item.image} desc={item.desc} color={item.color}/>}
-      />
-      </> 
-        
+      />   
     );
 };
 
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        flexWrap:'wrap',
+        // justifyContent: 'space-between',
          marginTop: 10,
+         width:"100%"
     },
   });
 export default Category;

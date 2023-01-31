@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import { responsiveHeight, responsiveWidth } from '../utils/ResposiveUI';
 
 const CategoryCard = ({name,desc,color, img}) => {
     return (
@@ -12,15 +13,14 @@ const CategoryCard = ({name,desc,color, img}) => {
 };
 const styles=(color) => StyleSheet.create({
     container: {
-    width:170,
-    height:150,
-    margin:5,
+    width:responsiveWidth(175),
+    height:responsiveHeight(150),
+    margin:6,
     borderRadius:15,
     borderWidth: 0,
     backgroundColor: color,
     alignItems: 'center',
     justifyContent: 'center',
-    // marginHorizontal:'center'
     },
     text:{
         textAlign: 'center',

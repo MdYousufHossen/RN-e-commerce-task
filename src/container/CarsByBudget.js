@@ -30,7 +30,8 @@ text:{
 flatListContainer:{
     flexDirection: 'row',
     flexWrap:'wrap',
-    justifyContent: 'space-between',
+    width:"100%"
+    // justifyContent: 'space-between',
 },
 
 })

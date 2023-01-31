@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import { responsiveHeight, responsiveWidth } from '../utils/ResposiveUI';
 
 const CarCart = () => {
     return (
@@ -13,12 +14,13 @@ const CarCart = () => {
 };
 const styles = StyleSheet.create({
     container:{
-        margin:5
+        margin:8
+        
     },
     image: {
         resizeMode: 'stretch',
-        width: 170,
-        height: 140,
+        width: responsiveWidth(170),
+        height:responsiveHeight(150),
         borderRadius: 10,
     },
     name: {
